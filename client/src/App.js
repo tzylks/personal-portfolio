@@ -9,12 +9,14 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
+import NavBar from './components/NavBar'
 
 function App() {
   return (
     <>
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <NavBar />
       <p>Hello</p>
 
       <Card sx={{ minWidth: 275 }}>

@@ -11,11 +11,14 @@ const theme = createTheme({
         main: '#76ff03',
       },
       background: {
-        default: '#252424',
-        paper: '#ff6d00',
+        default: '#1d1d1d',
+        paper: '#181818',
       },
       error: {
         main: '#ff0004',
+      },
+      text: {
+        primary: '#ffffff',
       },
     }
 })
