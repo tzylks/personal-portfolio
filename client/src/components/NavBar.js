@@ -22,20 +22,15 @@ const drawerWidth = 120;
 function NavBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [isOpen, setIsOpen] = React.useState(false)
 
   const variants = {
     open: { opacity: 1, x: 0 },
     closed: { opacity: 0, x: "-100%" },
   }
 
-  
-
-
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
@@ -86,8 +81,8 @@ function NavBar(props) {
           }}
         >
            <Box style={{ background: 'black', height: '30vh', width: '100vw' }}>
-              <Typography variant="h1" style={{fontFamily: 'Permanent Marker', position: 'absolute', marginTop: '5.3vh', marginLeft: '1.7vw', fontWeight: 800, color: 'white' }}>Tz</Typography>
-              <Typography variant="h1" style={{fontFamily: 'Permanent Marker', position: 'relative', marginTop: '5vh', marginLeft: '.9vw', color: 'green', fontWeight: 800}}>Tz</Typography>
+              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '5.3vh', marginLeft: '1.7vw', fontWeight: 800, color: 'white' }}>Tz</Typography>
+              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'relative', marginTop: '5vh', marginLeft: '.9vw', color: 'green', fontWeight: 800}}>Tz</Typography>
             </Box>
           <List>
             <ListItem button>
@@ -108,8 +103,8 @@ function NavBar(props) {
           open
         >
            <Box style={{ background: 'black', height: '30vh', width: '100vw'}}>
-              <Typography variant="h1" style={{fontFamily: 'Permanent Marker', position: 'absolute', marginTop: '8.2vh', marginLeft: '.3vw', color: '#F7FD04', fontWeight: 0 }}>Tz</Typography>
-              <Typography variant="h1" style={{fontFamily: 'Permanent Marker', position: 'relative', marginTop: '8vh', marginRight: 'vw', color: '#FC5404', fontWeight: 0}}>Tz</Typography>
+              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '2.2vh', marginLeft: '1.3vw', color: '#F7FD04', fontWeight: 0, fontSize: '5em' }}>Tz</Typography>
+              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '2vh',  marginLeft: '.8vw', color: '#FC5404', fontWeight: 0, fontSize: '5em'}}>Tz</Typography>
             </Box>
           <List>
             <Box style={{ marginLeft: '2vw', marginTop: '15vh' }}>
