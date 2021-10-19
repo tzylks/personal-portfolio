@@ -16,47 +16,32 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
-const drawerWidth = 240;
+
+const drawerWidth = 120;
 
 function NavBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false)
+
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  }
+
+  
+
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const drawer = (
-    <div>
-      <Toolbar />
-      <Divider />
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  );
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
+    <>
+  
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
@@ -78,7 +63,7 @@ function NavBar(props) {
           >
             <MenuIcon />
           </IconButton>
-        
+
         </Toolbar>
       </AppBar>
       <Box
@@ -100,7 +85,19 @@ function NavBar(props) {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
-          {drawer}
+           <Box style={{ background: 'black', height: '30vh', width: '100vw' }}>
+              <Typography variant="h1" style={{fontFamily: 'Permanent Marker', position: 'absolute', marginTop: '5.3vh', marginLeft: '1.7vw', fontWeight: 800, color: 'white' }}>Tz</Typography>
+              <Typography variant="h1" style={{fontFamily: 'Permanent Marker', position: 'relative', marginTop: '5vh', marginLeft: '.9vw', color: 'green', fontWeight: 800}}>Tz</Typography>
+            </Box>
+          <List>
+            <ListItem button>
+              <Box style={{ marginLeft: '7vw', marginTop: '40vh' }}>
+                <ListItemText>
+                  Hi
+                </ListItemText>
+              </Box>
+            </ListItem>
+          </List>
         </Drawer>
         <Drawer
           variant="permanent"
@@ -110,11 +107,22 @@ function NavBar(props) {
           }}
           open
         >
-          {drawer}
+           <Box style={{ background: 'black', height: '30vh', width: '100vw'}}>
+              <Typography variant="h1" style={{fontFamily: 'Permanent Marker', position: 'absolute', marginTop: '8.2vh', marginLeft: '.3vw', color: '#F7FD04', fontWeight: 0 }}>Tz</Typography>
+              <Typography variant="h1" style={{fontFamily: 'Permanent Marker', position: 'relative', marginTop: '8vh', marginRight: 'vw', color: '#FC5404', fontWeight: 0}}>Tz</Typography>
+            </Box>
+          <List>
+            <Box style={{ marginLeft: '2vw', marginTop: '15vh' }}>
+              <ListItem button style={{ marginRight: '4vw' }}>
+                <ListItemText> Hi </ListItemText>
+              </ListItem>
+            </Box>
+          </List>
         </Drawer>
       </Box>
-      
+
     </Box>
+    </>
   );
 }
 
