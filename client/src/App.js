@@ -18,7 +18,6 @@ function App() {
   
   const [dark, setDark] = useState(false)
 
-
   const light = {
     palette: {
       type: 'light',

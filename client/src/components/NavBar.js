@@ -81,18 +81,26 @@ function NavBar(props) {
           }}
         >
            <Box style={{ background: 'black', height: '30vh', width: '100vw' }}>
-              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '5.3vh', marginLeft: '1.7vw', fontWeight: 800, color: 'white' }}>Tz</Typography>
-              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'relative', marginTop: '5vh', marginLeft: '.9vw', color: 'green', fontWeight: 800}}>Tz</Typography>
+              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '5.3vh', marginLeft: '1.7vw', fontWeight: 0, color: '#F38EFF' }}>Tz</Typography>
+              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'relative', marginTop: '5vh', marginLeft: '.9vw', color: '#FF00C8', fontWeight: 0}}>Tz</Typography>
             </Box>
-          <List>
-            <ListItem button>
-              <Box style={{ marginLeft: '7vw', marginTop: '40vh' }}>
-                <ListItemText>
-                  Hi
-                </ListItemText>
-              </Box>
-            </ListItem>
-          </List>
+          
+            <Box style={{ marginTop: '15vh' }}>
+              
+              <Typography variant='body' style={{fontFamily: 'MuseoModerno', textAlign: 'center'}}>about_Me</Typography> 
+            
+          </Box>
+          <Box style={{ marginTop: '1vh' }}>
+          
+              <Typography variant='body' style={{fontFamily: 'MuseoModerno', textAlign: 'center'}}>skills</Typography> 
+            
+          </Box>
+          <Box style={{ marginTop: '1vh' }}>
+            
+              <Typography variant='body' style={{fontFamily: 'MuseoModerno', textAlign: 'center'}}>contact</Typography> 
+            
+          </Box>
+
         </Drawer>
         <Drawer
           variant="permanent"
@@ -102,17 +110,27 @@ function NavBar(props) {
           }}
           open
         >
-           <Box style={{ background: 'black', height: '30vh', width: '100vw'}}>
-              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '2.2vh', marginLeft: '1.3vw', color: '#F7FD04', fontWeight: 0, fontSize: '5em' }}>Tz</Typography>
-              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '2vh',  marginLeft: '.8vw', color: '#FC5404', fontWeight: 0, fontSize: '5em'}}>Tz</Typography>
+           <Box style={{ background: 'black', height: '10vh', width: '100vw'}}>
+              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '2.5vh', marginLeft: '1.3vw', color: '#F38EFF', fontWeight: 0, fontSize: '5em' }}>Tz</Typography>
+              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '2vh',  marginLeft: '.8vw', color: '#FF00C8', fontWeight: 0, fontSize: '5em'}}>Tz</Typography>
             </Box>
-          <List>
-            <Box style={{ marginLeft: '2vw', marginTop: '15vh' }}>
-              <ListItem button style={{ marginRight: '4vw' }}>
-                <ListItemText> Hi </ListItemText>
-              </ListItem>
+          
+            <Box style={{ marginTop: '15vh' }}>
+              
+                <Typography variant='body' style={{fontFamily: 'MuseoModerno', textAlign: 'center'}}>about_Me</Typography> 
+              
             </Box>
-          </List>
+            <Box style={{ marginTop: '1vh' }}>
+            
+                <Typography variant='body' style={{fontFamily: 'MuseoModerno', textAlign: 'center'}}>skills</Typography> 
+              
+            </Box>
+            <Box style={{ marginTop: '1vh' }}>
+              
+                <Typography variant='body' style={{fontFamily: 'MuseoModerno', textAlign: 'center'}}>contact</Typography> 
+              
+            </Box>
+          
         </Drawer>
       </Box>
 
