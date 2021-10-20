@@ -15,6 +15,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { motion, useMotionValue, useTransform } from 'framer-motion'
+
 
 
 const drawerWidth = 120;
@@ -36,105 +38,105 @@ function NavBar(props) {
 
   return (
     <>
-  
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar
-        position="fixed"
-        sx={{
-          boxShadow: 'none',
-          background: 'transparent',
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
-        }}
-      >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
+        <AppBar
+          position="fixed"
+          sx={{
+            boxShadow: 'none',
+            background: 'transparent',
+            width: { sm: `calc(100% - ${drawerWidth}px)` },
+            ml: { sm: `${drawerWidth}px` },
+          }}
+        >
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: 'none' } }}
+            >
+              <MenuIcon />
+            </IconButton>
+
+          </Toolbar>
+        </AppBar>
+        <Box
+          component="nav"
+          sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+          aria-label="mailbox folders"
+        >
+          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+          <Drawer
+            container={container}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              display: { xs: 'block', sm: 'none' },
+              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            }}
           >
-            <MenuIcon />
-          </IconButton>
+            <Box style={{ background: 'black', height: '30vh', width: '100vw' }}>
+              <Typography variant="h1" style={{ fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '5.3vh', marginLeft: '1.7vw', fontWeight: 0, color: '#F38EFF' }}>Tz</Typography>
+              <Typography variant="h1" style={{ fontFamily: 'MuseoModerno', position: 'relative', marginTop: '5vh', marginLeft: '.9vw', color: '#FF00C8', fontWeight: 0 }}>Tz</Typography>
+            </Box>
 
-        </Toolbar>
-      </AppBar>
-      <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="mailbox folders"
-      >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-           <Box style={{ background: 'black', height: '30vh', width: '100vw' }}>
-              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '5.3vh', marginLeft: '1.7vw', fontWeight: 0, color: '#F38EFF' }}>Tz</Typography>
-              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'relative', marginTop: '5vh', marginLeft: '.9vw', color: '#FF00C8', fontWeight: 0}}>Tz</Typography>
+            <Divider />
+            <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 9, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '20vh', marginLeft: '3vw', fontFamily: 'MuseoModerno' }} >
+              about_Me
+            </motion.span>
+            <Divider />
+            <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 11, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '1vh', marginLeft: '3vw', fontFamily: 'MuseoModerno' }} >
+              skills
+            </motion.span>
+            <Divider />
+            <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 11, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '1vh', marginLeft: '3vw', fontFamily: 'MuseoModerno' }} >
+              contact
+            </motion.span>
+            <Divider />
+          </Drawer>
+          <Drawer
+            variant="permanent"
+            sx={{
+              display: { xs: 'none', sm: 'block' },
+              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            }}
+            open
+          >
+            <Box style={{ background: 'black', height: '10vh', width: '100vw' }}>
+              <Typography variant="h1" style={{ fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '2.5vh', marginLeft: '1.3vw', color: '#F38EFF', fontWeight: 0, fontSize: '5em' }}>Tz</Typography>
+              <Typography variant="h1" style={{ fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '2vh', marginLeft: '.8vw', color: '#FF00C8', fontWeight: 0, fontSize: '5em' }}>Tz</Typography>
+              <Typography vairant='body' style={{ fontFamily: 'MuseoModerno', color: '#F2F4F6', position: 'absolute', marginTop: '13.5vh', marginLeft: '1.3vw' }}>developer</Typography>
             </Box>
-          
-            <Box style={{ marginTop: '15vh' }}>
-              
-              <Typography variant='body' style={{fontFamily: 'MuseoModerno', textAlign: 'center'}}>about_Me</Typography> 
             
-          </Box>
-          <Box style={{ marginTop: '1vh' }}>
-          
-              <Typography variant='body' style={{fontFamily: 'MuseoModerno', textAlign: 'center'}}>skills</Typography> 
+            <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 9, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '30vh', marginLeft: '.8vw', fontFamily: 'MuseoModerno' }} >
+            <hr style={{color: 'white', width: '150%', marginLeft: '-1vw'}} />
+              about_Me
+            <hr style={{color: 'white', width: '150%', marginLeft: '-1vw'}} />
+            </motion.span>
+            <Divider />
+            <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 11, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '0vh', marginLeft: '.8vw', fontFamily: 'MuseoModerno' }} >
             
-          </Box>
-          <Box style={{ marginTop: '1vh' }}>
+              skills
+              <hr style={{color: 'white', width: '180%', marginLeft: '-4vw'}} />
+            </motion.span>
+            <Divider />
+            <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 11, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '0vh', marginLeft: '.8vw', fontFamily: 'MuseoModerno' }} >
             
-              <Typography variant='body' style={{fontFamily: 'MuseoModerno', textAlign: 'center'}}>contact</Typography> 
-            
-          </Box>
+              contact
+              <hr style={{color: 'white', width: '180%', marginLeft: '-4vw'}} />
+            </motion.span>
+            <Divider />
+          </Drawer>
+        </Box>
 
-        </Drawer>
-        <Drawer
-          variant="permanent"
-          sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-          open
-        >
-           <Box style={{ background: 'black', height: '10vh', width: '100vw'}}>
-              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '2.5vh', marginLeft: '1.3vw', color: '#F38EFF', fontWeight: 0, fontSize: '5em' }}>Tz</Typography>
-              <Typography variant="h1" style={{fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '2vh',  marginLeft: '.8vw', color: '#FF00C8', fontWeight: 0, fontSize: '5em'}}>Tz</Typography>
-            </Box>
-          
-            <Box style={{ marginTop: '15vh' }}>
-              
-                <Typography variant='body' style={{fontFamily: 'MuseoModerno', textAlign: 'center'}}>about_Me</Typography> 
-              
-            </Box>
-            <Box style={{ marginTop: '1vh' }}>
-            
-                <Typography variant='body' style={{fontFamily: 'MuseoModerno', textAlign: 'center'}}>skills</Typography> 
-              
-            </Box>
-            <Box style={{ marginTop: '1vh' }}>
-              
-                <Typography variant='body' style={{fontFamily: 'MuseoModerno', textAlign: 'center'}}>contact</Typography> 
-              
-            </Box>
-          
-        </Drawer>
       </Box>
-
-    </Box>
     </>
   );
 }

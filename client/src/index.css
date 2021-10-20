@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  cursor: url('https://s.electerious.com/images/codepen/cursor.svg') 10 10, auto;
+
 }
 
 code {
@@ -23,8 +26,16 @@ code {
 
 @media only screen and (min-width: 768px) {
   .aboutMe { margin-left: 14vw; 
-             margin-top: 30vh;
+             margin-top: 20vh;
              width: 50vw;
             }
 }
+
+
+
+
+
+
+
+
 

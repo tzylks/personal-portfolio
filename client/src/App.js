@@ -68,16 +68,20 @@ function App() {
 
   const appliedTheme = createTheme(dark ? darkTheme : light);
 
+  
+  
   return (
     <>
       <ThemeProvider theme={appliedTheme}>
         <CssBaseline />
+        
         <NavBar />
         <Box style={{position: 'absolute', right: 0, zIndex: 1201}}>
            <Switch checked={dark} onChange={() => setDark(!dark)} />
         </Box>
        
         <AboutMe />
+   
       </ThemeProvider>
     </>
   );
