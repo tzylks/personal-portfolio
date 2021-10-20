@@ -103,7 +103,7 @@ function AboutMe() {
                 transition={{ duration: 3, repeat: Infinity }}
             >
                 <Box className='scrolldown' style={{ marginTop: '15vh', position: 'absolute', marginLeft: '20vw', right: -20, transform: 'rotate(90deg)' }}>
-                    <Typography variant="body" style={{ fontFamily: 'MuseoModerno' }}>Scroll Down</Typography>
+                    <Typography variant="body" style={{ fontFamily: 'MuseoModerno' }}>scroll down</Typography>
                 </Box>
             </motion.div>
             <Box className='scrolldown' style={{ position: 'absolute', marginLeft: '28vw', right: 18, marginTop: '19vh' }}>
@@ -114,7 +114,7 @@ function AboutMe() {
                 transition={{ duration: 3, repeat: Infinity }}
             >
                 <Box className='scrolldown' style={{ marginTop: '15vh', position: 'absolute', left: 100, transform: 'rotate(90deg)' }}>
-                    <Typography variant="body" style={{ fontFamily: 'MuseoModerno' }}>Scroll Down</Typography>
+                    <Typography variant="body" style={{ fontFamily: 'MuseoModerno' }}>scroll down</Typography>
                 </Box>
             </motion.div>
             <Box className='scrolldown' style={{ position: 'absolute', left: 136.4, marginTop: '19vh' }}>

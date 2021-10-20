@@ -39,7 +39,7 @@ function NavBar(props) {
   return (
     <>
 
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex', overflow: 'contain'}}>
         <CssBaseline />
         <AppBar
           position="fixed"
@@ -103,9 +103,10 @@ function NavBar(props) {
           </Drawer>
           <Drawer
             variant="permanent"
+            
             sx={{
               display: { xs: 'none', sm: 'block' },
-              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, overflow: 'hidden' },
             }}
             open
           >
@@ -116,7 +117,7 @@ function NavBar(props) {
             </Box>
             
             <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 9, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '30vh', marginLeft: '.8vw', fontFamily: 'MuseoModerno' }} >
-            <hr style={{color: 'white', width: '150%', marginLeft: '-1vw'}} />
+            <hr style={{color: 'white', width: '150%', marginLeft: '-1vw', overflow: 'hidden'}} />
               about_Me
             <hr style={{color: 'white', width: '150%', marginLeft: '-1vw'}} />
             </motion.span>
@@ -124,7 +125,7 @@ function NavBar(props) {
             <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 11, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '0vh', marginLeft: '.8vw', fontFamily: 'MuseoModerno' }} >
             
               skills
-              <hr style={{color: 'white', width: '180%', marginLeft: '-4vw'}} />
+              <hr style={{color: 'white', width: '150%', marginLeft: '-4vw'}} />
             </motion.span>
             <Divider />
             <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 11, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '0vh', marginLeft: '.8vw', fontFamily: 'MuseoModerno' }} >

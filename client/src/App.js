@@ -13,6 +13,7 @@ import { useState } from 'react'
 import { useTheme, createTheme } from '@mui/material/styles';
 import Switch from '@mui/material/Switch'
 import AboutMe from './components/AboutMe'
+import Skills from './components/Skills'
 
 function App() {
   
@@ -81,6 +82,7 @@ function App() {
         </Box>
        
         <AboutMe />
+        <Skills />
    
       </ThemeProvider>
     </>
