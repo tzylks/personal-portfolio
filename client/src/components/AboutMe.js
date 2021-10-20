@@ -4,6 +4,7 @@ import Box from '@mui/material/Box'
 import KeyboardArrowDownSharpIcon from '@mui/icons-material/KeyboardArrowDownSharp';
 import { motion, useMotionValue, useTransform } from 'framer-motion'
 import '../index.css';
+import Arrow from './arrow.png'
 import Me from './me.png'
 
 function AboutMe() {
@@ -67,7 +68,12 @@ function AboutMe() {
                 >
                 </motion.img>
             </Box>
-
+            
+            <motion.img src={Arrow} style={{top: 130, right: 300, position: 'absolute', width: '10%', transform: 'rotate(40deg)', zIndez: -1}} />
+            <Box>
+                <Typography variant='h5' style={{ zIndex: -1, fontFamily: 'Permanent Marker', position: 'absolute', top: 100, right: 400, transform: 'rotate(310deg)'}}> Drag Me </Typography>
+            </Box>
+            
 
             <Box className="aboutMe">
                 <motion.h1
@@ -97,11 +103,22 @@ function AboutMe() {
                 transition={{ duration: 3, repeat: Infinity }}
             >
                 <Box className='scrolldown' style={{ marginTop: '15vh', position: 'absolute', marginLeft: '20vw', right: -20, transform: 'rotate(90deg)' }}>
-                    <Typography variant="h5" style={{ fontFamily: 'MuseoModerno' }}>Scroll Down</Typography>
+                    <Typography variant="body" style={{ fontFamily: 'MuseoModerno' }}>Scroll Down</Typography>
                 </Box>
             </motion.div>
-            <Box className='scrolldown' style={{ position: 'absolute', marginLeft: '20vw', right: 33, marginTop: '22vh' }}>
-                <KeyboardArrowDownSharpIcon style={{ fontSize: "4vh" }} />
+            <Box className='scrolldown' style={{ position: 'absolute', marginLeft: '28vw', right: 18, marginTop: '19vh' }}>
+                <KeyboardArrowDownSharpIcon style={{ fontSize: "2vh" }} />
+            </Box>
+            <motion.div
+                animate={{ y: [-20, -40, -40, -20], color: ['#000', '#fff', '#000'] }}
+                transition={{ duration: 3, repeat: Infinity }}
+            >
+                <Box className='scrolldown' style={{ marginTop: '15vh', position: 'absolute', left: 100, transform: 'rotate(90deg)' }}>
+                    <Typography variant="body" style={{ fontFamily: 'MuseoModerno' }}>Scroll Down</Typography>
+                </Box>
+            </motion.div>
+            <Box className='scrolldown' style={{ position: 'absolute', left: 136.4, marginTop: '19vh' }}>
+                <KeyboardArrowDownSharpIcon style={{ fontSize: "2vh" }} />
             </Box>
 
         </>
