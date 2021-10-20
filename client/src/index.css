@@ -16,9 +16,9 @@ code {
 }
 
 @media only screen and (max-width: 600px) {
-  .aboutMe { margin-left: 4vw; 
+  .aboutMe { margin-left: 10vw; 
              margin-top: 15vh;
-             width: 100vw;
+             width: 85vw;
             }
   .scrolldown { display: none;
             }

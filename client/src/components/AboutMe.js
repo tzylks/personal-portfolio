@@ -36,7 +36,7 @@ function AboutMe() {
 
     const letter = {
         hidden: { opacity: 0, y: 0 },
-        visible: { opacity: 1, y: 60, transition: { type: "spring", damping: 3, stiffness: 50 },  }
+        visible: { opacity: 1, y: 60, transition: { type: "spring", damping: 3, stiffness: 50 }, }
     }
 
 
@@ -44,11 +44,27 @@ function AboutMe() {
         <>
 
             <Box sx={{
-                display: { 
-                    xs: 'none', 
-                    lg: 'inline' 
-                }}}
-                style={{ position: 'absolute', marginTop: '18vh', right: 20 }}>
+                display: {
+                    xs: 'none',
+                    sm: 'none',
+                    md: 'none',
+                    lg: 'inline'
+                },
+                position: {
+                    md: 'absolute',
+                    lg: 'absolute'
+                },
+                right: {
+                    md: 0,
+                    lg: 20
+                },
+                mt: {
+                    md: '20vh',
+                    lg: '18vh'
+                },
+
+            }}
+            >
                 <motion.img
                     src={Me}
                     style={{
@@ -68,29 +84,30 @@ function AboutMe() {
                 >
                 </motion.img>
             </Box>
-            
-            <motion.img src={Arrow} style={{top: 130, right: 300, position: 'absolute', width: '10%', transform: 'rotate(40deg)', zIndez: -1}} />
-            <Box>
-                <Typography variant='h5' style={{ zIndex: -1, fontFamily: 'Permanent Marker', position: 'absolute', top: 100, right: 400, transform: 'rotate(310deg)'}}> Drag Me </Typography>
+            <Box sx={{ display: { xs: 'none', sm: 'none', md: 'none', lg: 'inline' } }}>
+                <motion.img src={Arrow} style={{ top: 130, right: 300, position: 'absolute', width: '10%', transform: 'rotate(40deg)', zIndez: -1 }} />
             </Box>
-            
+            <Box sx={{ display: { xs: 'none', sm: 'none', md: 'none', lg: 'inline' } }}>
+                <Typography variant='h5' style={{ zIndex: -1, fontFamily: 'Permanent Marker', position: 'absolute', top: 100, right: 400, transform: 'rotate(310deg)' }}> Drag Me </Typography>
+            </Box>
 
-            <Box className="aboutMe">
+
+            <Box className="aboutMe" sx={{ width: { sm: '100vw', md: '100vw', lg: '80vw' }, ml: { sm: '20vw', md: '20vw', lg: '15vw' }, mt: { sm: '3vh', lg: '23vh' } }}>
                 <motion.h1
                     variants={dropLetters}
                     initial="hidden"
                     animate="visible"
                     style={{ fontSize: '50px', fontFamily: 'MuseoModerno', color: '#FF00C8', marginBottom: '-10px' }}
                 >
-                    
+
                     {line1.split("").map((char, index) => {
                         return (
-                            <motion.span key={char + "-" + index} variants={letter} style={{fontSize: '5.4rem', fontWeight: 100}}>
+                            <motion.span key={char + "-" + index} variants={letter} style={{ fontSize: '5.4rem', fontWeight: 100 }}>
                                 {char}
                             </motion.span>
                         )
                     })}
-                    
+
                 </motion.h1>
                 <br />
                 <Typography className="aboutMe" variant="h4" style={{ fontFamily: 'MuseoModerno', fontWeight: 100 }}> i'm a fullstack developer located in arizona. i consider myself to be highly detailed and creative, with a focus on finding solutions that enhance user experiences.</Typography>
@@ -98,28 +115,32 @@ function AboutMe() {
                 <br />
                 <Typography className="aboutMe" variant="h4" style={{ fontFamily: 'MuseoModerno', fontWeight: 100 }}>having an educational background in psychology informs my ability to meet the needs of individuals from all walks of life.</Typography>
             </Box>
-            <motion.div
-                animate={{ y: [-20, -40, -40, -20], color: ['#000', '#fff', '#000'] }}
-                transition={{ duration: 3, repeat: Infinity }}
-            >
-                <Box className='scrolldown' style={{ marginTop: '15vh', position: 'absolute', marginLeft: '20vw', right: -20, transform: 'rotate(90deg)' }}>
-                    <Typography variant="body" style={{ fontFamily: 'MuseoModerno' }}>scroll down</Typography>
+            <Box>
+                <motion.div
+                    animate={{ y: [-20, -40, -40, -20], color: ['#000', '#fff', '#000'] }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                >
+                    <Box className='scrolldown' sx={{display: {xs: 'none', s: 'none', m: 'none', lg: 'inline'}}} style={{ marginTop: '13vh', position: 'absolute', marginLeft: '20vw', right: -20, transform: 'rotate(90deg)' }}>
+                        <Typography variant="body" style={{ fontFamily: 'MuseoModerno' }}>scroll down</Typography>
+                    </Box>
+                </motion.div>
+                <Box className='scrolldown' sx={{display: {xs: 'none', s: 'none', m: 'none', lg: 'inline'}}} style={{ position: 'absolute', marginLeft: '28vw', right: 18, marginTop: '17vh' }}>
+                    <KeyboardArrowDownSharpIcon style={{ fontSize: "2vh" }} />
                 </Box>
-            </motion.div>
-            <Box className='scrolldown' style={{ position: 'absolute', marginLeft: '28vw', right: 18, marginTop: '19vh' }}>
-                <KeyboardArrowDownSharpIcon style={{ fontSize: "2vh" }} />
             </Box>
-            <motion.div
-                animate={{ y: [-20, -40, -40, -20], color: ['#000', '#fff', '#000'] }}
-                transition={{ duration: 3, repeat: Infinity }}
-            >
-                <Box className='scrolldown' style={{ marginTop: '15vh', position: 'absolute', left: 100, transform: 'rotate(90deg)' }}>
-                    <Typography variant="body" style={{ fontFamily: 'MuseoModerno' }}>scroll down</Typography>
+           
+                <motion.div
+                    animate={{ y: [-20, -40, -40, -20], color: ['#000', '#fff', '#000'] }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                >
+                    <Box className='scrolldown' sx={{display: {xs: 'none', s: 'none', m: 'none', lg: 'inline'}}} style={{ marginTop: '13vh', position: 'absolute', left: 100, transform: 'rotate(90deg)' }}>
+                        <Typography variant="body" style={{ fontFamily: 'MuseoModerno' }}>scroll down</Typography>
+                    </Box>
+                </motion.div>
+                <Box className='scrolldown' sx={{display: {xs: 'none', s: 'none', m: 'none', lg: 'inline'}}} style={{ position: 'absolute', left: 136.4, marginTop: '17vh' }}>
+                    <KeyboardArrowDownSharpIcon style={{ fontSize: "2vh" }} />
                 </Box>
-            </motion.div>
-            <Box className='scrolldown' style={{ position: 'absolute', left: 136.4, marginTop: '19vh' }}>
-                <KeyboardArrowDownSharpIcon style={{ fontSize: "2vh" }} />
-            </Box>
+            
 
         </>
     )
