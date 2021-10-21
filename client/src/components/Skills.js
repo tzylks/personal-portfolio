@@ -125,7 +125,7 @@ function Skills() {
                             },
                             display: {
                                 xs:'none',
-                                lg: 'inline'
+                                lg: 'flex'
                             }
                         
                         }}>
