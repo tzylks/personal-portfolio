@@ -10,6 +10,7 @@ function Skills() {
 
     const controls = useAnimation();
     const { ref, inView } = useInView();
+    const { ref2, inView2 } = useInView()
 
     useEffect(() => {
         if (inView) {
@@ -20,12 +21,21 @@ function Skills() {
         }
     }, [controls, inView])
 
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible')
+        }
+        if (!inView) {
+            controls.start('hidden')
+        }
+    }, [controls, inView2])
+
     const intoView = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
-                duration: 4,
+                duration: 2,
             },
         },
     }
@@ -46,7 +56,7 @@ function Skills() {
     return (
         <>
             <motion.div
-                ref={ref}
+                ref={ref2}
                 initial="hidden"
                 animate={controls}
                 variants={intoView}
