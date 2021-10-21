@@ -23,19 +23,19 @@ function Contact() {
             controls.start('visible')
         }
         if (!inView) {
-            controls.start('visible')
+            controls.start('hidden')
         }
     }, [controls, inView])
 
     const intoView = {
-        hidden: { opacity: 0},
+        hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            x: [-1000, 0],
+
             transition: {
                 duration: 2,
             },
-            transitionEnd: { hidden: {opacity: 1} }
+            transitionEnd: { type: 'spring' }
         },
 
     }
@@ -80,36 +80,39 @@ function Contact() {
                 initial="hidden"
                 animate={controls}
                 variants={intoView}
-                style={{marginTop: '10vh'}}
+                style={{ marginTop: '10vh' }}
             >
-                    <Box sx={{
-                        ml: {
-                            s: '15vw',
-                            xs: '10vw',
-                            md: '15vw',
-                            lg: '15vw'
-                        },
-                        mt: {
-                            s: '15vw',
-                            xs: '15vw',
-                            md: '15vw',
-                            lg: '5vw'
-                        }
+                <Box sx={{
+                    ml: {
+                        s: '15vw',
+                        xs: '10vw',
+                        md: '15vw',
+                        lg: '15vw'
+                    },
+                    mt: {
+                        s: '15vw',
+                        xs: '70vw',
+                        md: '15vw',
+                        lg: '5vw'
+                    },
+                    width: {
+                        xs: '40vw'
+                    }
 
+                }}>
+                    <Typography variant='h1' style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: 'white', fontSize: "6.4rem", position: 'absolute', opacity: .4, fontWeight: 800 }}>contact me</Typography>
+                    <Typography variant='h1' style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: 'white', fontSize: "5.4rem" }}>contact me</Typography>
+                    <Box sx={{
+                        width: {
+                            s: '90vw',
+                            xs: '90vw',
+                            md: '40vw',
+                            lg: '40vw'
+                        }
                     }}>
-                        <Typography variant='h1' style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: 'white', fontSize: "6.4rem", position: 'absolute', opacity: .4, fontWeight: 800 }}>contact me</Typography>
-                        <Typography variant='h1' style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: 'white', fontSize: "5.4rem" }}>contact me</Typography>
-                        <Box sx={{
-                            width: {
-                                s: '90vw',
-                                xs: '90vw',
-                                md: '40vw',
-                                lg: '40vw'
-                            }
-                        }}>
-                          
-                        </Box>
+
                     </Box>
+                </Box>
                 <Box sx={{ mt: { lg: '10vh' }, position: 'absolute', left: 200, display: { xs: 'none', s: 'none', md: 'none', lg: 'inline' } }}>
                     <Map
                         center={[-110.9264800, 32.2217400]}
@@ -124,11 +127,11 @@ function Contact() {
                         <Image id={'image-uid'} data={Me} center={[-110.9264800, 32.2217400]} />
                     </Map>
                 </Box>
-                <Box sx={{ bgcolor: 'gray', opacity: .3, height: "80vh", width: {lg: '50vw', sm: '10vw'}, position: 'absolute', right: 40, mt: {lg: '10vh', xs: '38vh' }}}>
+                <Box sx={{ bgcolor: 'gray', opacity: .3, height: {lg: "80vh", xs: '110vh'}, width: { lg: '50vw', sm: '10vw' }, position: {lg: 'absolute', xs: 'inline'}, right: 40, mt: { lg: '10vh', xs: '10vh' } }}>
 
                 </Box>
 
-                <Box sx={{ mt: { lg: '19vh', xs: '50vh' }, position: 'absolute', ml: {lg: '52vw', xs: '20vw'} }} style={{ textAlign: 'center', width: '40%' }}>  
+                <Box sx={{ mt: { lg: '19vh', xs: '-100vh' }, position: 'absolute', ml: { lg: '52vw', xs: '10vw' }, width: {lg: '40%', xs: '80%'} }} style={{ textAlign: 'center'}}>
                     <form onSubmit={sendMail}>
                         <TextField variant="outlined" sx={{ bgcolor: 'black' }} color="error" active fullWidth id="Subject" placeholder='Subject' value={subject} onChange={handleChangeSubject} />
                         <br />
@@ -140,10 +143,12 @@ function Contact() {
                         <br />
                         <br />
                         <TextField id="Body" multiline="true" rows="10" maxRows="10" fullWidth sx={{ bgcolor: 'black' }} color="error" placeholder='Message' value={message} onChange={handleChangeMessage} />
-                        <Button sx={{ opacity: .8, bgcolor: '#FF00C8', justifyContent: 'center', mt: { lg: '3vh' } }} type="submit">Submit</Button>
+                        <Box sx={{ml: { lg: '0vw'}}}>
+                            <Button sx={{ opacity: .8, bgcolor: '#FF00C8', justifyContent: { lg: 'center', xs: 'left' }, mt: { lg: '3vh', xs: '7vh' } }} type="submit">Submit</Button>
+                        </Box>
                     </form>
                 </Box>
-               
+
             </motion.div>
         </>
     )

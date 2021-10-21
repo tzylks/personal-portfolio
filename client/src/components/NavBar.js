@@ -120,21 +120,21 @@ function NavBar(props) {
             </Box>
             
             <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 9, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '30vh', marginLeft: '.8vw', fontFamily: 'MuseoModerno' }} >
-            <hr style={{color: 'white', width: '150%', marginLeft: '-1vw', overflow: 'hidden'}} />
+            <hr style={{color: 'gray', width: '150%', marginLeft: '-1vw', overflow: 'hidden', opacity: '.3'}} />
             <Link href='#about' style={{ textDecoration: 'none', marginTop: '0vh', marginLeft: 'vw', fontFamily: 'MuseoModerno', color: 'white' }} >aboutMe</Link>
-            <hr style={{color: 'white', width: '150%', marginLeft: '-1vw'}} />
+            <hr style={{color: 'gray', width: '150%', marginLeft: '-1vw', opacity: "0.3"}} />
             </motion.span>
             <Divider />
             <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 11, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '0vh', marginLeft: '.8vw', fontFamily: 'MuseoModerno' }} >
             
             <Link href='#skills' style={{ textDecoration: 'none', marginTop: '0vh', marginLeft: 'vw', fontFamily: 'MuseoModerno', color: 'white' }} >skills</Link>
-              <hr style={{color: 'white', width: '150%', marginLeft: '-4vw'}} />
+              <hr style={{color: 'gray', width: '150%', marginLeft: '-4vw', opacity: '.3'}} />
             </motion.span>
             <Divider />
             <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 11, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '0vh', marginLeft: '.8vw', fontFamily: 'MuseoModerno' }} >
             
               contact
-              <hr style={{color: 'white', width: '180%', marginLeft: '-4vw'}} />
+              <hr style={{color: 'gray', width: '180%', marginLeft: '-4vw', opacity: '.3'}} />
             </motion.span>
             <Divider />
           </Drawer>

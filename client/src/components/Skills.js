@@ -84,7 +84,6 @@ function Skills() {
             >
                 <Box
                     sx={{
-
                         display: {
                             xs: 'inline',
                             s: 'inline',
@@ -108,7 +107,7 @@ function Skills() {
                             lg: '15vw'
                         },
                         mt: {
-                            s: '15vw',
+                            s: '1vw',
                             xs: '15vw',
                             md: '15vw',
                             lg: '5vw'
@@ -123,7 +122,12 @@ function Skills() {
                                 xs: '90vw',
                                 md: '40vw',
                                 lg: '40vw'
+                            },
+                            display: {
+                                xs:'none',
+                                lg: 'inline'
                             }
+                        
                         }}>
                             <Typography variant="h4" style={{ marginTop: '4vh', fontFamily: 'MuseoModerno', fontWeight: 100 }}> i'm a fullstack developer located in arizona. i consider myself to be highly detailed and creative, with a focus on finding solutions that enhance user experiences.</Typography>
                         </Box>
@@ -217,7 +221,7 @@ function Skills() {
                         },
                         right: 240,
                         mt: {
-                            xs: '1vw',
+                            xs: '30vw',
                             s: '0vw',
                             lg: '19.5vw'
                         }
