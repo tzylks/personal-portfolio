@@ -48,7 +48,7 @@ function Skills() {
         visible: {
             opacity: 1,
             transition: {
-                duration: 2,
+                duration: .5,
             },
             transitionEnd: { type: 'spring' }
         },
@@ -135,7 +135,7 @@ function Skills() {
 
 
 
-
+                
                     <Box sx={{
                         position: {
                             xs: 'absolute',
@@ -143,7 +143,7 @@ function Skills() {
                             m: 'absolute',
                             lg: 'absolute'
                         },
-                        right: 239,
+                        right: {xs: 210, s: 210, lg: 239},
                         mt: {
                             xs: '10vw',
                             s: '0vw',
@@ -169,7 +169,7 @@ function Skills() {
                             m: 'absolute',
                             lg: 'absolute'
                         },
-                        right: 200,
+                        right: {xs: 170, s: 170, lg: 200},
                         mt: {
                             xs: '20vw',
                             s: '0vw',
@@ -194,7 +194,7 @@ function Skills() {
                             m: 'absolute',
                             lg: 'absolute'
                         },
-                        right: 280,
+                        right: {xs: 249, s: 249, lg: 280},
                         mt: {
                             xs: '1vw',
                             s: '0vw',
@@ -219,7 +219,7 @@ function Skills() {
                             m: 'absolute',
                             lg: 'absolute'
                         },
-                        right: 240,
+                        right: {xs: 210, s: 210, lg: 240},
                         mt: {
                             xs: '30vw',
                             s: '0vw',
@@ -236,9 +236,10 @@ function Skills() {
                             <Typography variant="body" style={{ marginTop: '.4vh', fontSize: '.5rem', fontFamily: 'MuseoModerno', position: 'absolute', top: 0 }}>react</Typography>
                         </motion.div>
                     </Box>
+                    </Box>
 
 
-                </Box>
+                
             </motion.div>
 
            

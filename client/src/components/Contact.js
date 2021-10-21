@@ -127,7 +127,7 @@ function Contact() {
                         <Image id={'image-uid'} data={Me} center={[-110.9264800, 32.2217400]} />
                     </Map>
                 </Box>
-                <Box sx={{ bgcolor: 'gray', opacity: .3, height: {lg: "80vh", xs: '110vh'}, width: { lg: '50vw', sm: '10vw' }, position: {lg: 'absolute', xs: 'inline'}, right: 40, mt: { lg: '10vh', xs: '10vh' } }}>
+                <Box sx={{ bgcolor: 'gray', opacity: .3, height: {lg: "80vh", xs: '110vh', xs: '110vh'}, width: { lg: '50vw', sm: '10vw', sm: '10vw' }, position: {lg: 'absolute', xs: 'inline', s: 'inline'}, right: {lg: 40, xs: 0, s: 0}, mt: { lg: '10vh', xs: '10vh' } }}>
 
                 </Box>
 
