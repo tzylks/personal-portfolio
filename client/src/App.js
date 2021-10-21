@@ -14,6 +14,8 @@ import { useTheme, createTheme } from '@mui/material/styles';
 import Switch from '@mui/material/Switch'
 import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
+import Contact from './components/Contact'
+
 
 function App() {
   
@@ -29,12 +31,12 @@ function App() {
         main: '#76ff03',
       },
       background: {
-        default: '#191A19',
+        default: '#000',
         paper: '#000',
         
       },
       error: {
-        main: '#ff0004',
+        main: '#FF00C8',
       },
       text: {
         primary: '#fff',
@@ -55,14 +57,14 @@ function App() {
         main: '#76ff03',
       },
       background: {
-        default: 'green',
-        paper: 'green',
+        default: '#A3F7BF',
+        paper: '#000',
       },
       error: {
-        main: '#ff0004',
+        main: '#FF00C8',
       },
       text: {
-        primary: '#ffffff',
+        primary: '#000',
       },
     }
   }
@@ -83,6 +85,7 @@ function App() {
        
         <AboutMe />
         <Skills />
+        <Contact />
    
       </ThemeProvider>
     </>

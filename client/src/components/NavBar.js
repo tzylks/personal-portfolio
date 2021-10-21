@@ -12,6 +12,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
+import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -92,9 +93,11 @@ function NavBar(props) {
               about_Me
             </motion.span>
             <Divider />
+            
             <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 11, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '1vh', marginLeft: '3vw', fontFamily: 'MuseoModerno' }} >
-              skills
+            <Link href='#skills'>skills</Link>
             </motion.span>
+            
             <Divider />
             <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 11, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '1vh', marginLeft: '3vw', fontFamily: 'MuseoModerno' }} >
               contact
@@ -118,13 +121,13 @@ function NavBar(props) {
             
             <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 9, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '30vh', marginLeft: '.8vw', fontFamily: 'MuseoModerno' }} >
             <hr style={{color: 'white', width: '150%', marginLeft: '-1vw', overflow: 'hidden'}} />
-              about_Me
+            <Link href='#about' style={{ textDecoration: 'none', marginTop: '0vh', marginLeft: 'vw', fontFamily: 'MuseoModerno', color: 'white' }} >aboutMe</Link>
             <hr style={{color: 'white', width: '150%', marginLeft: '-1vw'}} />
             </motion.span>
             <Divider />
             <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 11, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '0vh', marginLeft: '.8vw', fontFamily: 'MuseoModerno' }} >
             
-              skills
+            <Link href='#skills' style={{ textDecoration: 'none', marginTop: '0vh', marginLeft: 'vw', fontFamily: 'MuseoModerno', color: 'white' }} >skills</Link>
               <hr style={{color: 'white', width: '150%', marginLeft: '-4vw'}} />
             </motion.span>
             <Divider />

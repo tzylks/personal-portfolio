@@ -4,9 +4,22 @@ import Box from '@mui/material/Box'
 import KeyboardArrowDownSharpIcon from '@mui/icons-material/KeyboardArrowDownSharp';
 import { motion, useMotionValue, useTransform, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import ReactMapboxGl, { Layer, Feature, Image } from 'react-mapbox-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import Me from './me.png'
+
+
+
 
 function Skills() {
+    const [viewport, setViewport] = useState({
+        width: 400,
+        height: 400,
+        latitude: 37.7577,
+        longitude: -122.4376,
+        zoom: 8
+    });
 
     const controls = useAnimation();
     const { ref, inView } = useInView();
@@ -37,7 +50,9 @@ function Skills() {
             transition: {
                 duration: 2,
             },
+            transitionEnd: { type: 'spring' }
         },
+
     }
 
     const progressBar = {
@@ -52,6 +67,10 @@ function Skills() {
         hidden: { scale: 0 },
         visible: { scale: 3, width: [0, 0, 0, 0, 90], transition: { duration: 3 }, }
     }
+    const progressBarFour = {
+        hidden: { scale: 0 },
+        visible: { scale: 3, width: [0, 0, 0, 0, 110], transition: { duration: 3 }, }
+    }
 
     return (
         <>
@@ -60,6 +79,8 @@ function Skills() {
                 initial="hidden"
                 animate={controls}
                 variants={intoView}
+                id="skills"
+                
             >
                 <Box
                     sx={{
@@ -77,6 +98,8 @@ function Skills() {
                         }
                     }}
                 >
+
+                    
                     <Box sx={{
                         ml: {
                             s: '15vw',
@@ -88,11 +111,12 @@ function Skills() {
                             s: '15vw',
                             xs: '15vw',
                             md: '15vw',
-                            lg: '15vw'
+                            lg: '5vw'
                         }
 
                     }}>
-                        <Typography variant='h1' style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#FF00C8', fontSize: "5.4rem" }}>skills & abilities</Typography>
+                        <Typography variant='h1' style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#FF0000', fontSize: "6.4rem", position: 'absolute', opacity: .4, fontWeight: 800 }}>skills & abilities</Typography>
+                        <Typography variant='h1' style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#FF0000', fontSize: "5.4rem" }}>skills & abilities</Typography>
                         <Box sx={{
                             width: {
                                 s: '90vw',
@@ -107,6 +131,7 @@ function Skills() {
 
 
 
+
                     <Box sx={{
                         position: {
                             xs: 'absolute',
@@ -118,7 +143,7 @@ function Skills() {
                         mt: {
                             xs: '10vw',
                             s: '0vw',
-                            lg: '19.5vw'
+                            lg: '10.5vw'
                         }
                     }}
                     >
@@ -144,7 +169,7 @@ function Skills() {
                         mt: {
                             xs: '20vw',
                             s: '0vw',
-                            lg: '24.5vw'
+                            lg: '13.5vw'
                         }
                     }}
                     >
@@ -169,7 +194,7 @@ function Skills() {
                         mt: {
                             xs: '1vw',
                             s: '0vw',
-                            lg: '28.5vw'
+                            lg: '16.5vw'
                         }
                     }}
                     >
@@ -183,9 +208,37 @@ function Skills() {
                         </motion.div>
                     </Box>
 
+                    <Box sx={{
+                        position: {
+                            xs: 'absolute',
+                            s: 'absolute',
+                            m: 'absolute',
+                            lg: 'absolute'
+                        },
+                        right: 240,
+                        mt: {
+                            xs: '1vw',
+                            s: '0vw',
+                            lg: '19.5vw'
+                        }
+                    }}
+                    >
+                        <motion.div
+                            ref={ref}
+                            initial="hidden"
+                            animate={controls}
+                            variants={progressBarFour}
+                            style={{ marginTop: '10vh', marginLeft: '15vw', width: '6vw', height: '.3vh', background: '#FF00C8' }}>
+                            <Typography variant="body" style={{ marginTop: '.4vh', fontSize: '.5rem', fontFamily: 'MuseoModerno', position: 'absolute', top: 0 }}>react</Typography>
+                        </motion.div>
+                    </Box>
+
 
                 </Box>
             </motion.div>
+
+           
+
         </>
     )
 }
