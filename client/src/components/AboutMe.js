@@ -98,7 +98,8 @@ function AboutMe() {
                     variants={dropLetters}
                     initial="hidden"
                     animate="visible"
-                    style={{ fontSize: '50px', fontFamily: 'MuseoModerno', color: '#FF00C8', marginBottom: '-10px' }}
+                    style={{ fontFamily: 'MuseoModerno', color: '#FF00C8', marginBottom: '-10px' }}
+                    sx={{fontSize: '10px'}}
                 >
 
                     {line1.split("").map((char, index) => {

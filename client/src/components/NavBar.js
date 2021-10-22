@@ -90,17 +90,17 @@ function NavBar(props) {
 
             <Divider />
             <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 9, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '20vh', marginLeft: '3vw', fontFamily: 'MuseoModerno' }} >
-              about_Me
+              <Link href='#about' style={{ textDecoration: 'none', marginTop: '0vh', marginLeft: 'vw', fontFamily: 'MuseoModerno', color: 'white' }} >aboutMe</Link>
             </motion.span>
             <Divider />
             
             <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 11, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '1vh', marginLeft: '3vw', fontFamily: 'MuseoModerno' }} >
-            <Link href='#skills'>skills</Link>
+            <Link href='#skills' style={{ textDecoration: 'none', marginTop: '0vh', marginLeft: 'vw', fontFamily: 'MuseoModerno', color: 'white' }} >skills</Link>
             </motion.span>
             
             <Divider />
             <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 11, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '1vh', marginLeft: '3vw', fontFamily: 'MuseoModerno' }} >
-              contact
+            <Link href='#Contact' style={{ textDecoration: 'none', marginTop: '0vh', marginLeft: 'vw', fontFamily: 'MuseoModerno', color: 'white' }} >contact</Link>
             </motion.span>
             <Divider />
           </Drawer>
@@ -133,7 +133,7 @@ function NavBar(props) {
             <Divider />
             <motion.span whileHover={{ color: ['#fff', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF', '#F38EFF'], scale: 1.2, x: 11, transition: { type: 'spring', damping: 1, stiffness: 100 } }} style={{ marginTop: '0vh', marginLeft: '.8vw', fontFamily: 'MuseoModerno' }} >
             
-              contact
+            <Link href='#Contact' style={{ textDecoration: 'none', marginTop: '0vh', marginLeft: 'vw', fontFamily: 'MuseoModerno', color: 'white' }} >contact</Link>
               <hr style={{color: 'gray', width: '180%', marginLeft: '-4vw', opacity: '.3'}} />
             </motion.span>
             <Divider />

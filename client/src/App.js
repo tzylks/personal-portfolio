@@ -71,6 +71,17 @@ function App() {
 
   const appliedTheme = createTheme(dark ? darkTheme : light);
 
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
   
   
   return (

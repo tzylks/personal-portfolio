@@ -114,8 +114,8 @@ function Skills() {
                         }
 
                     }}>
-                        <Typography variant='h1' style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#FF0000', fontSize: "6.4rem", position: 'absolute', opacity: .4, fontWeight: 800 }}>skills & abilities</Typography>
-                        <Typography variant='h1' style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#FF0000', fontSize: "5.4rem" }}>skills & abilities</Typography>
+                        <Typography variant='h1' sx={{fontSize: {lg: "6.4rem", xs: '3.4rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#FF0000', position: 'absolute', opacity: .4, fontWeight: 800 }}>skills & abilities</Typography>
+                        <Typography variant='h1' sx={{fontSize: {lg: "5.4rem", xs: '3.4rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#FF0000'}}>skills & abilities</Typography>
                         <Box sx={{
                             width: {
                                 s: '90vw',
@@ -129,7 +129,7 @@ function Skills() {
                             }
                         
                         }}>
-                            <Typography variant="h4" style={{ marginTop: '4vh', fontFamily: 'MuseoModerno', fontWeight: 100 }}> i'm a fullstack developer located in arizona. i consider myself to be highly detailed and creative, with a focus on finding solutions that enhance user experiences.</Typography>
+                            <Typography variant="h4" style={{ marginTop: '4vh', fontFamily: 'MuseoModerno', fontWeight: 100 }}> my professional background is diverse -- spanning event promotion, management, photography and more. that being said, my real passion is for problem solving. making things work is the at the core of why i love coding. making final products that look polished is my passion. utilizing a combination of react.js, ruby, rails, javascript, and more, i am able to launch products efficiently with a creative touch </Typography>
                         </Box>
                     </Box>
 

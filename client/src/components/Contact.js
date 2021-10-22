@@ -5,7 +5,7 @@ import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, useMotionValue, useTransform, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
@@ -14,6 +14,8 @@ function Contact() {
     const [firstName, setFirstName] = useState('')
     const [message, setMessage] = useState('')
     const [email, setEmail] = useState('')
+
+    const inputName = useRef(null)
 
     const controls = useAnimation();
     const { ref, inView } = useInView();
@@ -81,6 +83,7 @@ function Contact() {
                 animate={controls}
                 variants={intoView}
                 style={{ marginTop: '10vh' }}
+                id="Contact"
             >
                 <Box sx={{
                     ml: {
@@ -100,8 +103,8 @@ function Contact() {
                     }
 
                 }}>
-                    <Typography variant='h1' style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: 'white', fontSize: "6.4rem", position: 'absolute', opacity: .4, fontWeight: 800 }}>contact me</Typography>
-                    <Typography variant='h1' style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: 'white', fontSize: "5.4rem" }}>contact me</Typography>
+                    <Typography variant='h1' sx={{fontSize: {lg: "6.4rem", xs: '4.4rem'}}}  style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: 'white',  position: 'absolute', opacity: .4, fontWeight: 800 }}>contact</Typography>
+                    <Typography variant='h1'  sx={{fontSize: {lg: "5.4rem", xs: '3.3rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: 'white' }}>contact</Typography>
                     <Box sx={{
                         width: {
                             s: '90vw',
@@ -133,16 +136,16 @@ function Contact() {
 
                 <Box sx={{ mt: { lg: '19vh', xs: '-100vh' }, position: 'absolute', ml: { lg: '52vw', xs: '10vw' }, width: {lg: '40%', xs: '80%'} }} style={{ textAlign: 'center'}}>
                     <form onSubmit={sendMail}>
-                        <TextField variant="outlined" sx={{ bgcolor: 'black' }} color="error" active fullWidth id="Subject" placeholder='Subject' value={subject} onChange={handleChangeSubject} />
+                        <TextField variant="outlined" sx={{ bgcolor: 'black' }} color="error" active fullWidth id="Subject" placeholder='Subject' />
                         <br />
                         <br />
-                        <TextField fullWidth value='hi' sx={{ bgcolor: 'black' }} color="error" placeholder='First Name' value={firstName} onChange={handleChangeName} />
+                        <TextField fullWidth sx={{ bgcolor: 'black' }} color="error" placeholder='First Name' />
                         <br />
                         <br />
-                        <TextField fullWidth value='hi' sx={{ bgcolor: 'black' }} color="error" id="Email" placeholder='Email' value={email} onChange={handleChangeEmail} />
+                        <TextField fullWidth sx={{ bgcolor: 'black' }} color="error" id="Email" placeholder='Email'  />
                         <br />
                         <br />
-                        <TextField id="Body" multiline="true" rows="10" maxRows="10" fullWidth sx={{ bgcolor: 'black' }} color="error" placeholder='Message' value={message} onChange={handleChangeMessage} />
+                        <TextField id="Body" multiline="true" rows="10" maxRows="10" fullWidth sx={{ bgcolor: 'black' }} color="error" placeholder='Message'  />
                         <Box sx={{ml: { lg: '0vw'}}}>
                             <Button sx={{ opacity: .8, bgcolor: '#FF00C8', justifyContent: { lg: 'center', xs: 'left' }, mt: { lg: '3vh', xs: '7vh' } }} type="submit">Submit</Button>
                         </Box>
