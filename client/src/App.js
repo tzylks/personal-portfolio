@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import NavBar from './components/NavBar'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTheme, createTheme } from '@mui/material/styles';
 import Switch from '@mui/material/Switch'
 import AboutMe from './components/AboutMe'
@@ -71,7 +71,7 @@ function App() {
 
   const appliedTheme = createTheme(dark ? darkTheme : light);
 
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  useEffect(() => {document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
@@ -79,7 +79,7 @@ function App() {
             behavior: 'smooth'
         });
     });
-});
+}); }, [])
 
 
   

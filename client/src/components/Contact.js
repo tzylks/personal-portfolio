@@ -104,7 +104,7 @@ function Contact() {
 
                 }}>
                     <Typography variant='h1' sx={{fontSize: {lg: "6.4rem", xs: '4.4rem'}}}  style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: 'white',  position: 'absolute', opacity: .4, fontWeight: 800 }}>contact</Typography>
-                    <Typography variant='h1'  sx={{fontSize: {lg: "5.4rem", xs: '3.3rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: 'white' }}>contact</Typography>
+                    <Typography variant='h1'  sx={{fontSize: {lg: "5.4rem", xs: '3.3rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: 'white' }}>Contact</Typography>
                     <Box sx={{
                         width: {
                             s: '90vw',

@@ -114,8 +114,8 @@ function Skills() {
                         }
 
                     }}>
-                        <Typography variant='h1' sx={{fontSize: {lg: "6.4rem", xs: '3.4rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#FF0000', position: 'absolute', opacity: .4, fontWeight: 800 }}>skills & abilities</Typography>
-                        <Typography variant='h1' sx={{fontSize: {lg: "5.4rem", xs: '3.4rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#FF0000'}}>skills & abilities</Typography>
+                        <Typography variant='h1' sx={{fontSize: {lg: "6.4rem", xs: '3.4rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#FF0000', position: 'absolute', opacity: .4, fontWeight: 800 }}>Skills & Abilities</Typography>
+                        <Typography variant='h1' sx={{fontSize: {lg: "5.4rem", xs: '3.4rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#FF0000'}}>Skills & Abilities</Typography>
                         <Box sx={{
                             width: {
                                 s: '90vw',
@@ -124,12 +124,12 @@ function Skills() {
                                 lg: '40vw'
                             },
                             display: {
-                                xs:'none',
+                                xs:'inline',
                                 lg: 'flex'
                             }
                         
                         }}>
-                            <Typography variant="h4" style={{ marginTop: '4vh', fontFamily: 'MuseoModerno', fontWeight: 100 }}> my professional background is diverse -- spanning event promotion, management, photography and more. that being said, my real passion is for problem solving. making things work is the at the core of why i love coding. making final products that look polished is my passion. utilizing a combination of react.js, ruby, rails, javascript, and more, i am able to launch products efficiently with a creative touch </Typography>
+                            <Typography variant="h4" sx={{mt: '4vh', fontFamily: 'MuseoModerno', fontWeight: 100, fontSize: {xs: '1.4rem'}}}> My professional background is diverse -- spanning event promotion, management, photography and more. That being said, my real passion is for problem solving. Making things work is the at the core of why I love coding. Making final products that look polished is my passion. Utilizing a combination of react.js, ruby, rails, javascript, and other libraries when needed, I am able to launch products efficiently with a creative touch </Typography>
                         </Box>
                     </Box>
 
@@ -148,7 +148,8 @@ function Skills() {
                             xs: '10vw',
                             s: '0vw',
                             lg: '10.5vw'
-                        }
+                        }, 
+                        
                     }}
                     >
                         <motion.div

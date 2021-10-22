@@ -84,8 +84,8 @@ function NavBar(props) {
             }}
           >
             <Box style={{ background: 'black', height: '30vh', width: '100vw' }}>
-              <Typography variant="h1" style={{ fontFamily: 'MuseoModerno', position: 'absolute', marginTop: '5.3vh', marginLeft: '1.7vw', fontWeight: 0, color: '#F38EFF' }}>Tz</Typography>
-              <Typography variant="h1" style={{ fontFamily: 'MuseoModerno', position: 'relative', marginTop: '5vh', marginLeft: '.9vw', color: '#FF00C8', fontWeight: 0 }}>Tz</Typography>
+              <Typography variant="h1" sx={{fontSize: {xs: '5rem', s: '', lg: '4.6rem'}, fontFamily: 'MuseoModerno', position: 'absolute', mt: '5.3vh', ml: '1.7vw', fontWeight: 0, color: '#F38EFF'}} >Tz</Typography>
+              <Typography variant="h1" sx={{fontSize: {xs: '4.5rem', sm: '4rem'}, fontFamily: 'MuseoModerno', position: 'relative', marginTop: '5vh', marginLeft: '3vw', color: '#FF00C8', fontWeight: 0 }}>Tz</Typography>
             </Box>
 
             <Divider />
