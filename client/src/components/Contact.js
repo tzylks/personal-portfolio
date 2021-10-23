@@ -96,11 +96,15 @@ function Contact() {
                         s: '15vw',
                         xs: '70vw',
                         md: '15vw',
-                        lg: '5vw'
+                        lg: '1givw'
                     },
                     width: {
                         xs: '40vw'
+                    },
+                    mb: {
+                        lg: '-5vh'
                     }
+                    
 
                 }}>
                     <Typography variant='h1' sx={{fontSize: {lg: "6.4rem", xs: '4.4rem'}}}  style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#f25331',  position: 'absolute', opacity: .4, fontWeight: 800 }}>contact</Typography>

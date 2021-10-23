@@ -25,7 +25,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 
 
 
-const drawerWidth = 120;
+const drawerWidth = 140;
 
 function NavBar(props) {
   const { window } = props;
@@ -166,12 +166,12 @@ function NavBar(props) {
               '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, overflow: 'hidden' },
             }}
             open>
-            <Box id="about" sx={{ position: 'absolute', top: 300, left: 20, display: 'flex', flexDirection: 'column', ml: '1vw' }}>
+            <Box id="about" sx={{ position: 'absolute', top: 240, left: 20, display: 'flex', flexDirection: 'column', ml: '0vw' }}>
               <motion.div whileHover={{ scale: 1.2, rotate: 360, color: 'green', transition: { type: 'spring', damping: 7, stiffness: 100 } }} style={{ marginRight: '.7vw' }}>
-                <Link href="https://github.com/tzylks"><GitHubIcon onMouseOver={() => setColor('#f25331')} onMouseOut={() => setColor('#fff')} style={{ color: color, fontSize: '5rem' }} /></Link>
+                <Link href="https://github.com/tzylks"><GitHubIcon onMouseOver={() => setColor('#f25331')} onMouseOut={() => setColor('#fff')} style={{ color: color, fontSize: '5rem', marginBottom: '3vh' }} /></Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.2, rotate: 360, color: 'black', transition: { type: 'spring', damping: 7, stiffness: 100 } }}>
-                <Link href="https://www.linkedin.com/in/trevor-zylks-3b476020b/"><LinkedInIcon onMouseOver={() => setColor2('#f25331')} onMouseOut={() => setColor2('#fff')} style={{ color: color2, fontSize: '5rem' }} /></Link>
+                <Link href="https://www.linkedin.com/in/trevor-zylks-3b476020b/"><LinkedInIcon onMouseOver={() => setColor2('#f25331')} onMouseOut={() => setColor2('#fff')} style={{ color: color2, fontSize: '5rem', marginBottom: '3vh' }} /></Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.2, rotate: 360, color: 'black', transition: { type: 'spring', damping: 7, stiffness: 100 } }}>
                 <Link href="https://docs.google.com/document/d/1f9c6VtlEVwM5tOOjhr6tGaKfaFzqT8eLWlt4RaQeR1w/edit?usp=sharing"><DescriptionIcon onMouseOver={() => setColor3('#f25331')} onMouseOut={() => setColor3('#fff')} style={{ color: color3, fontSize: '5rem' }} /></Link>

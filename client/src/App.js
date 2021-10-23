@@ -37,7 +37,7 @@ function App() {
       },
       background: {
         default: '#1f1f1f',
-        paper: '#000',
+        paper: '#1f1f1f',
         
       },
       error: {
