@@ -114,8 +114,8 @@ function Skills() {
                         }
 
                     }}>
-                        <Typography variant='h1' sx={{fontSize: {lg: "6.4rem", xs: '3.4rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#FF0000', position: 'absolute', opacity: .4, fontWeight: 800 }}>Skills & Abilities</Typography>
-                        <Typography variant='h1' sx={{fontSize: {lg: "5.4rem", xs: '3.4rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#FF0000'}}>Skills & Abilities</Typography>
+                        <Typography variant='h1' sx={{fontSize: {lg: "6.4rem", xs: '3.4rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#f6005d', position: 'absolute', opacity: .4, fontWeight: 800 }}>Skills & Abilities</Typography>
+                        <Typography variant='h1' sx={{fontSize: {lg: "5.4rem", xs: '3.4rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#f6005d'}}>Skills & Abilities</Typography>
                         <Box sx={{
                             width: {
                                 s: '90vw',
@@ -135,7 +135,7 @@ function Skills() {
 
 
 
-                
+                <Box sx={{ml: '10vh'}}>
                     <Box sx={{
                         position: {
                             xs: 'absolute',
@@ -143,12 +143,13 @@ function Skills() {
                             m: 'absolute',
                             lg: 'absolute'
                         },
-                        right: {xs: 210, s: 210, lg: 239},
+                        right: {xs: 50, s: 210, lg: 239},
                         mt: {
-                            xs: '10vw',
-                            s: '0vw',
+                            xs: '-7vw',
+                            s: '15vw',
                             lg: '10.5vw'
                         }, 
+                        
                         
                     }}
                     >
@@ -170,12 +171,13 @@ function Skills() {
                             m: 'absolute',
                             lg: 'absolute'
                         },
-                        right: {xs: 170, s: 170, lg: 200},
+                        right: {xs: 45, s: 170, lg: 200},
                         mt: {
-                            xs: '20vw',
+                            xs: '13vw',
                             s: '0vw',
                             lg: '13.5vw'
-                        }
+                        }, 
+                        
                     }}
                     >
                         <motion.div
@@ -195,12 +197,13 @@ function Skills() {
                             m: 'absolute',
                             lg: 'absolute'
                         },
-                        right: {xs: 249, s: 249, lg: 280},
+                        right: {xs: 45, s: 249, lg: 280},
                         mt: {
-                            xs: '1vw',
+                            xs: '3vw',
                             s: '0vw',
                             lg: '16.5vw'
-                        }
+                        },
+                        
                     }}
                     >
                         <motion.div
@@ -220,12 +223,13 @@ function Skills() {
                             m: 'absolute',
                             lg: 'absolute'
                         },
-                        right: {xs: 210, s: 210, lg: 240},
+                        right: {xs: 50, s: 210, lg: 240},
                         mt: {
-                            xs: '30vw',
+                            xs: '23vw',
                             s: '0vw',
                             lg: '19.5vw'
-                        }
+                        },
+                        
                     }}
                     >
                         <motion.div
@@ -236,6 +240,7 @@ function Skills() {
                             style={{ marginTop: '10vh', marginLeft: '15vw', width: '6vw', height: '.3vh', background: '#FF00C8' }}>
                             <Typography variant="body" style={{ marginTop: '.4vh', fontSize: '.5rem', fontFamily: 'MuseoModerno', position: 'absolute', top: 0 }}>react</Typography>
                         </motion.div>
+                    </Box>
                     </Box>
                     </Box>
 

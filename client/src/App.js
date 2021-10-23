@@ -15,6 +15,11 @@ import Switch from '@mui/material/Switch'
 import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
+import Me from './components/Me'
+import AppBar from '@mui/material/AppBar'
+import Divider from '@mui/material/Divider'
+import Link from '@mui/material/Link'
+import { motion } from 'framer-motion'
 
 
 function App() {
@@ -31,7 +36,7 @@ function App() {
         main: '#76ff03',
       },
       background: {
-        default: '#000',
+        default: '#1f1f1f',
         paper: '#000',
         
       },
@@ -88,16 +93,17 @@ function App() {
     <>
       <ThemeProvider theme={appliedTheme}>
         <CssBaseline />
-        
-        <NavBar />
-        <Box style={{position: 'absolute', right: 0, zIndex: 1201}}>
-           <Switch checked={dark} onChange={() => setDark(!dark)} />
-        </Box>
+      
+        <div style={{overflow: 'hidden'}}>
+
        
+
+       
+        <NavBar />
         <AboutMe />
         <Skills />
         <Contact />
-   
+      </div>
       </ThemeProvider>
     </>
   );

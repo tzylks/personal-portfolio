@@ -103,8 +103,8 @@ function Contact() {
                     }
 
                 }}>
-                    <Typography variant='h1' sx={{fontSize: {lg: "6.4rem", xs: '4.4rem'}}}  style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: 'white',  position: 'absolute', opacity: .4, fontWeight: 800 }}>contact</Typography>
-                    <Typography variant='h1'  sx={{fontSize: {lg: "5.4rem", xs: '3.3rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: 'white' }}>Contact</Typography>
+                    <Typography variant='h1' sx={{fontSize: {lg: "6.4rem", xs: '4.4rem'}}}  style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#f25331',  position: 'absolute', opacity: .4, fontWeight: 800 }}>contact</Typography>
+                    <Typography variant='h1'  sx={{fontSize: {lg: "5.4rem", xs: '3.3rem'}}} style={{ fontFamily: 'MuseoModerno', fontWeight: 100, color: '#f25331' }}>Contact</Typography>
                     <Box sx={{
                         width: {
                             s: '90vw',
@@ -147,7 +147,7 @@ function Contact() {
                         <br />
                         <TextField id="Body" multiline="true" rows="10" maxRows="10" fullWidth sx={{ bgcolor: 'black' }} color="error" placeholder='Message'  />
                         <Box sx={{ml: { lg: '0vw'}}}>
-                            <Button sx={{ opacity: .8, bgcolor: '#FF00C8', justifyContent: { lg: 'center', xs: 'left' }, mt: { lg: '3vh', xs: '7vh' } }} type="submit">Submit</Button>
+                            <Button sx={{ opacity: .8, bgcolor: '#f25331', justifyContent: { lg: 'center', xs: 'left' }, mt: { lg: '3vh', xs: '7vh' } }} type="submit">Submit</Button>
                         </Box>
                     </form>
                 </Box>
