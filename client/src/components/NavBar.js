@@ -87,7 +87,7 @@ function NavBar(props) {
               keepMounted: true, // Better open performance on mobile.
             }}
             sx={{
-              display: { xs: 'block', sm: 'none' },
+              display: { xs: 'block', sm: 'none' }, boxShadow: '1000px black',
               '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
             }}
           >
@@ -96,7 +96,7 @@ function NavBar(props) {
               <motion.div whileHover={{ scale: 1.2, rotate: 360, color: 'green', transition: { type: 'spring', damping: 7, stiffness: 100 } }} style={{ marginRight: '.7vw', marginBottom: '3vh' }}>
                 <Link href="https://github.com/tzylks"><GitHubIcon onMouseOver={() => setColor('#f25331')} onMouseOut={() => setColor('#fff')} style={{ color: color, fontSize: '5rem' }} /></Link>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.2, rotate: 360, color: 'black', transition: { type: 'spring', damping: 7, stiffness: 100 }}} style={{marginBottom: '3vh'}}>
+              <motion.div whileHover={{ scale: 1.2, rotate: 360, color: 'black', transition: { type: 'spring', damping: 7, stiffness: 100 } }} style={{ marginBottom: '3vh' }}>
                 <Link href="https://www.linkedin.com/in/trevor-zylks-3b476020b/"><LinkedInIcon onMouseOver={() => setColor2('#f25331')} onMouseOut={() => setColor2('#fff')} style={{ color: color2, fontSize: '5rem' }} /></Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.2, rotate: 360, color: 'black', transition: { type: 'spring', damping: 7, stiffness: 100 } }}>
@@ -158,13 +158,14 @@ function NavBar(props) {
             </motion.span>
             <Divider />
           </Drawer> */}
+        
           <Drawer
             variant="permanent"
 
             sx={{
               display: { xs: 'none', sm: 'block' },
-              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, overflow: 'hidden' },
-            }}
+              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, overflow: 'hidden'
+              }}}
             open>
             <Box id="about" sx={{ position: 'absolute', top: 240, left: 20, display: 'flex', flexDirection: 'column', ml: '0vw' }}>
               <motion.div whileHover={{ scale: 1.2, rotate: 360, color: 'green', transition: { type: 'spring', damping: 7, stiffness: 100 } }} style={{ marginRight: '.7vw' }}>
@@ -178,6 +179,7 @@ function NavBar(props) {
               </motion.div>
             </Box>
           </Drawer>
+         
         </Box>
 
       </Box>

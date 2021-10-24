@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import NavBar from './components/NavBar'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useTheme, createTheme } from '@mui/material/styles';
 import Switch from '@mui/material/Switch'
 import AboutMe from './components/AboutMe'
@@ -91,9 +91,11 @@ function App() {
   
   return (
     <>
+    <Suspense fallback={<Skills />}>
       <ThemeProvider theme={appliedTheme}>
         <CssBaseline />
-      
+
+       
         <div style={{overflow: 'hidden'}}>
 
        
@@ -103,8 +105,11 @@ function App() {
         <AboutMe />
         <Skills />
         <Contact />
+        
       </div>
+     
       </ThemeProvider>
+      </Suspense>
     </>
   );
 }

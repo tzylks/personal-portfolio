@@ -168,7 +168,7 @@ function AboutMe() {
                         }}
                         animate={{ rotateZ: [-5, 5, -5], color: ['#000', '#fff', '#000'] }}
                         transition={{ duration: 3, repeat: Infinity }}
-
+                        
 
                     >
                     </motion.img>

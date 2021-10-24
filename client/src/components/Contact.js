@@ -96,7 +96,7 @@ function Contact() {
                         s: '15vw',
                         xs: '70vw',
                         md: '15vw',
-                        lg: '1givw'
+                        lg: '1vw'
                     },
                     width: {
                         xs: '40vw'
